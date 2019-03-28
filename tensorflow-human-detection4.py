@@ -87,11 +87,11 @@ if __name__ == "__main__":
         # Visualization of the results of a detection.
 
         for i in range(len(boxes)):
-            # Class 1 represents human
+            
             if  scores[i] > threshold:
                 box = boxes[i]
                 cv2.rectangle(img,(box[1],box[0]),(box[3],box[2]),(255,0,0),2)
-                cv2.putText(img, str(classes[i]), (box[1]-10,box[0]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,0,0), 2)
+                cv2.putText(img, str("Face"), (box[1]-10,box[0]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,0,0), 2)
 
         cv2.imshow("preview", img)
         key = cv2.waitKey(5)
